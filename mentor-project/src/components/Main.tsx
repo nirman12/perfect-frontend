@@ -3,6 +3,7 @@ import NotificationIcon from "../icons/Notification";
 import ProfileIcon from "../icons/Profile";
 import RequestsIcon from "../icons/RequestsIcon";
 import TickIcon from "../icons/Tick";
+import Requests from "./Requests";
 
 export default function () {
   return (
@@ -18,10 +19,11 @@ export default function () {
         </div>
       </div>
       <div className="flex my-10 mx-20 bg-white w-96 justify-center rounded-md">
-        <button className="flex rounded-md p-4 hover:bg-darkTeal hover:text-white"><RequestsIcon/>Requests</button>
-        <button className="flex rounded-md p-4 hover:bg-darkTeal hover:text-white"><TickIcon/>Accepted</button>
-        <button className="flex rounded-md p-4 hover:bg-darkTeal hover:text-white"><CrossIcon/>Rejected</button>
+        <button className="flex rounded-md p-4 hover:bg-darkTeal hover:text-white transition duration-700"><RequestsIcon/>Requests</button>
+        <button className="flex rounded-md p-4 hover:bg-darkTeal hover:text-white transition duration-700"><TickIcon/>Accepted</button>
+        <button className="flex rounded-md p-4 hover:bg-darkTeal hover:text-white transition duration-700"><CrossIcon/>Rejected</button>
       </div>
+      <Requests userName="Perfect Bansal" semester="5th Semester" course="BSc Hons Computing" firstSubTitle="Web developer" secondSubTitle="Ml Engineer" expiry="Expiry" time="6 hours Ago" details="View Details"/>
     </div>
   );
 }

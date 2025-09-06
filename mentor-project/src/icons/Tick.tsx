@@ -1,4 +1,11 @@
-export default function TickIcon() {
+import type { ReactElement } from "react";
+
+interface IconProps{
+  size ?: string,
+  color?: string
+}
+
+export default function TickIcon(props:IconProps) {
   return (
     <div>
       <svg
@@ -6,8 +13,8 @@ export default function TickIcon() {
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth="1.5"
-        stroke="currentColor"
-        className="size-6"
+        stroke={`${props.color ? props.color : "black"}`}
+        className={`${props.size ? props.size : "size-6"}`}
       >
         <path
           strokeLinecap="round"
