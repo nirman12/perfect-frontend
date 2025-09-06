@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import RejectModel from './components/Reject'
 import AcceptModel from './components/Accept'
+import Main from './components/Main'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
     <div>
       <RejectModel/>
       <AcceptModel/>
+      <Main/>
     </div>
   )
 }

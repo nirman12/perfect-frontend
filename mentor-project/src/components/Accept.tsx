@@ -4,20 +4,18 @@ export default function AcceptModel() {
       <div className="flex flex-col justify-center items-center gap-5 text-center w-96">
         <div className="flex flex-col gap-5">
           <h1 className="text-lg font-semibold">
-            Are you sure you want to reject?
+            Are you sure you want to Accept?
           </h1>
-          <p className="border border-amber-600 rounded-md p-3 text-gray-400 font-light">
-            The request will be permanently declined and the learner will be
-            notified about it.
+          <p className="text-gray-400 font-light">
+            The user will be notified of your approval.
           </p>
           <h3 className="text-left">
-            Give reason for the rejection of the request and confirm to reject
-            the request.
+            Any message to the student about the session? 
+            <p className="text-gray-400 font-light">(Optional)</p>
           </h3>
           <input
             type="text"
-            placeholder="(Reason)"
-            className="border border-black rounded-md py-5 px-2"
+            className="border border-gray-300 rounded-md py-5 px-2"
           />
         </div>
         <div className="flex gap-20">

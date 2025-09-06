@@ -8,6 +8,7 @@ export default {
     extend: {
       colors:{
         darkTeal: "#75be44",
+        bgRequest: "#c3cdc4"
       }
     },
   },

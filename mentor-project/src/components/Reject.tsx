@@ -17,7 +17,7 @@ export default function RejectModel() {
           <input
             type="text"
             placeholder="(Reason)"
-            className="border border-black rounded-md py-5 px-2"
+            className="border border-gray-300 rounded-md py-5 px-2"
           />
         </div>
         <div className="flex gap-20">
