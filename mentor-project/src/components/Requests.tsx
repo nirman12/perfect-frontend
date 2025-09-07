@@ -66,11 +66,11 @@ export default function Requests(props: RequestProps) {
           <div className="flex flex-col gap-2 text-xs text-gray-500">
             <div className="flex items-center gap-2 flex-wrap">
               <span className={`px-2 py-1 rounded-full font-medium border ${getExpiryColor(props.time)}`}>
-                {props.expiry}
+                • {props.expiry}
               </span>
               <span className="text-gray-600">{props.time}</span>
-              <button className="text-darkTeal hover:text-darkTeal/80 underline cursor-pointer font-medium transition-colors duration-200">
-                {props.details}
+              <button className="text-darkTeal hover:text-darkTeal/80 cursor-pointer font-medium transition-colors duration-200">
+                <span className="text-lg">•</span> <span className="underline">{props.details}</span>
               </button>
             </div>
           </div>

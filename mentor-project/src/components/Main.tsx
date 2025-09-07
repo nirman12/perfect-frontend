@@ -1,6 +1,6 @@
 import { useState } from "react";
 import CrossIcon from "../icons/Cross";
-import NotificationIcon from "../icons/Notification";
+// Removed NotificationIcon import as header icons were removed
 import ProfileIcon from "../icons/Profile";
 import RequestsIcon from "../icons/RequestsIcon";
 import TickIcon from "../icons/Tick";
@@ -15,9 +15,9 @@ export default function RequestsPage() {
   const [activeTab, setActiveTab] = useState<"requests" | "accepted" | "rejected">("requests");
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="bg-bgRequest rounded-xl shadow-lg p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen w-full bg-bgRequest overflow-x-hidden">
+      <div className="max-w-full px-4 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-8 lg:py-10">
+        <div className="w-full max-w-full">
           {/* Header */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
             <div className="flex-1">
@@ -28,14 +28,7 @@ export default function RequestsPage() {
                 Accept or reject the mentorship requests!
               </p>
             </div>
-            <div className="flex gap-3 items-center">
-              <div className="cursor-pointer p-2 rounded-full hover:bg-white/20 transition-colors duration-200">
-                <NotificationIcon />
-              </div>
-              <div className="cursor-pointer p-2 rounded-full hover:bg-white/20 transition-colors duration-200">
-                <ProfileIcon />
-              </div>
-            </div>
+            {/* Top-right action icons removed as requested */}
           </div>
 
           {/* Tabs */}
