@@ -5,6 +5,8 @@ import ProfileIcon from "../icons/Profile";
 import RequestsIcon from "../icons/RequestsIcon";
 import TickIcon from "../icons/Tick";
 import Requests from "./Requests";
+import Accepted from "./Accepted";
+import Rejected from "./Rejected";
 import AcceptModel from "./Accept";
 import RejectModel from "./Reject";
 
@@ -75,64 +77,123 @@ export default function RequestsPage() {
             </div>
           </div>
 
-          {/* Request card */}
+          {/* Content based on active tab */}
           <div className="space-y-4">
-            <Requests
-              profileIcon={<ProfileIcon />}
-              userName="Perfect Bansal"
-              semester="5th Semester"
-              course="BSc Hons Computing"
-              firstSubTitle="Web developer"
-              secondSubTitle="Ml Engineer"
-              expiry="Expiry"
-              time="6 hours Ago"
-              details="View Details"
-              onAccept={() => setOpenModal("accept")}
-              onReject={() => setOpenModal("reject")}
-            />
-            
-            {/* Additional request cards can be added here */}
-            <Requests
-              profileIcon={<ProfileIcon />}
-              userName="Sarah Johnson"
-              semester="3rd Semester"
-              course="Computer Science"
-              firstSubTitle="Frontend Developer"
-              secondSubTitle="UI/UX Designer"
-              expiry="Expiry"
-              time="2 hours Ago"
-              details="View Details"
-              onAccept={() => setOpenModal("accept")}
-              onReject={() => setOpenModal("reject")}
-            />
-            
-            <Requests
-              profileIcon={<ProfileIcon />}
-              userName="Mike Chen"
-              semester="4th Semester"
-              course="Software Engineering"
-              firstSubTitle="Backend Developer"
-              secondSubTitle="Database Admin"
-              expiry="Expiry"
-              time="10 hours Ago"
-              details="View Details"
-              onAccept={() => setOpenModal("accept")}
-              onReject={() => setOpenModal("reject")}
-            />
-            
-            <Requests
-              profileIcon={<ProfileIcon />}
-              userName="Emily Davis"
-              semester="2nd Semester"
-              course="Information Technology"
-              firstSubTitle="Mobile Developer"
-              secondSubTitle="DevOps Engineer"
-              expiry="Expiry"
-              time="2 days Ago"
-              details="View Details"
-              onAccept={() => setOpenModal("accept")}
-              onReject={() => setOpenModal("reject")}
-            />
+            {activeTab === "requests" && (
+              <>
+                <Requests
+                  profileIcon={<ProfileIcon />}
+                  userName="Perfect Bansal"
+                  semester="5th Semester"
+                  course="BSc Hons Computing"
+                  firstSubTitle="Web developer"
+                  secondSubTitle="Ml Engineer"
+                  expiry="Expiry"
+                  time="6 hours Ago"
+                  details="View Details"
+                  onAccept={() => setOpenModal("accept")}
+                  onReject={() => setOpenModal("reject")}
+                />
+                
+                <Requests
+                  profileIcon={<ProfileIcon />}
+                  userName="Sarah Johnson"
+                  semester="3rd Semester"
+                  course="Computer Science"
+                  firstSubTitle="Frontend Developer"
+                  secondSubTitle="UI/UX Designer"
+                  expiry="Expiry"
+                  time="2 hours Ago"
+                  details="View Details"
+                  onAccept={() => setOpenModal("accept")}
+                  onReject={() => setOpenModal("reject")}
+                />
+                
+                <Requests
+                  profileIcon={<ProfileIcon />}
+                  userName="Mike Chen"
+                  semester="4th Semester"
+                  course="Software Engineering"
+                  firstSubTitle="Backend Developer"
+                  secondSubTitle="Database Admin"
+                  expiry="Expiry"
+                  time="10 hours Ago"
+                  details="View Details"
+                  onAccept={() => setOpenModal("accept")}
+                  onReject={() => setOpenModal("reject")}
+                />
+                
+                <Requests
+                  profileIcon={<ProfileIcon />}
+                  userName="Emily Davis"
+                  semester="2nd Semester"
+                  course="Information Technology"
+                  firstSubTitle="Mobile Developer"
+                  secondSubTitle="DevOps Engineer"
+                  expiry="Expiry"
+                  time="2 days Ago"
+                  details="View Details"
+                  onAccept={() => setOpenModal("accept")}
+                  onReject={() => setOpenModal("reject")}
+                />
+              </>
+            )}
+
+            {activeTab === "accepted" && (
+              <>
+                <Accepted
+                  profileIcon={<ProfileIcon />}
+                  userName="John Smith"
+                  semester="4th Semester"
+                  course="Computer Science"
+                  firstSubTitle="Full Stack Developer"
+                  secondSubTitle="React Specialist"
+                  time="1 day Ago"
+                  details="View Details"
+                  comments="Great potential, looking forward to mentoring!"
+                />
+                
+                <Accepted
+                  profileIcon={<ProfileIcon />}
+                  userName="Lisa Wang"
+                  semester="3rd Semester"
+                  course="Software Engineering"
+                  firstSubTitle="Backend Developer"
+                  secondSubTitle="Python Expert"
+                  time="3 days Ago"
+                  details="View Details"
+                  comments="Excellent communication skills and eagerness to learn."
+                />
+              </>
+            )}
+
+            {activeTab === "rejected" && (
+              <>
+                <Rejected
+                  profileIcon={<ProfileIcon />}
+                  userName="Tom Wilson"
+                  semester="2nd Semester"
+                  course="Information Technology"
+                  firstSubTitle="Frontend Developer"
+                  secondSubTitle="JavaScript Developer"
+                  time="1 week Ago"
+                  details="View Details"
+                  comments="Schedule conflicts with current commitments."
+                />
+                
+                <Rejected
+                  profileIcon={<ProfileIcon />}
+                  userName="Anna Brown"
+                  semester="5th Semester"
+                  course="Computer Science"
+                  firstSubTitle="Mobile Developer"
+                  secondSubTitle="iOS Developer"
+                  time="2 weeks Ago"
+                  details="View Details"
+                  comments="Not available for the requested time slots."
+                />
+              </>
+            )}
           </div>
 
           {/* Modals */}
